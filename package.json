@@ -5,10 +5,8 @@
   "type": "module",
   "main": "src/server.ts",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview",
-    "dev:server": "nodemon --watch './**/*.ts' --exec 'ts-node-esm' ./src/server.ts"
+    "build": "rm -rf build && tsc --project tsconfig.release.json",
+    "dev": "nodemon --watch './**/*.ts' --exec 'ts-node-esm' ./src/server.ts"
   },
   "devDependencies": {
     "typescript": "^4.9.3",
